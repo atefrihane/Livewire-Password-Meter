@@ -19,6 +19,6 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
         Livewire::component('password-field', PasswordField::class);
-      
+        Route::get('/', PasswordField::class);
     }
 }
