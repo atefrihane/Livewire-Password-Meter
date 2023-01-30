@@ -1,13 +1,14 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Atef\LivewirePasswordMeter\Tests;
 
 use Illuminate\Support\Facades\View;
 
-use Livewire\LivewireServiceProvider;
-use VendorName\Skeleton\RouteServiceProvider;
+
+use Atef\LivewirePasswordMeter\RouteServiceProvider;
+use Atef\LivewirePasswordMeter\SkeletonServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use VendorName\Skeleton\SkeletonServiceProvider;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TestCase extends Orchestra
@@ -17,7 +18,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'VendorName\\Skeleton\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Atef\\LivewirePasswordMeter\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
       
         View::addLocation(dirname(__DIR__).'/resources/views');
@@ -29,9 +30,9 @@ class TestCase extends Orchestra
         return [
            
             SkeletonServiceProvider::class,
-            RouteServiceProvider::class,
        
-            LivewireServiceProvider::class
+        
+
         ];
     }
 
@@ -40,7 +41,7 @@ class TestCase extends Orchestra
         config()->set('database.default', 'testing');
 
         /*
-        $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
+        $migration = include __DIR__.'/../database/migrations/create_LivewirePasswordMeter_table.php.stub';
         $migration->up();
         */
     }

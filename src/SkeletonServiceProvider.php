@@ -1,11 +1,13 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Atef\LivewirePasswordMeter;
 
+use Livewire\Livewire;
 use Illuminate\Support\Facades\Route;
 use Spatie\LaravelPackageTools\Package;
-use VendorName\Skeleton\Commands\SkeletonCommand;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
+use Atef\LivewirePasswordMeter\Commands\SkeletonCommand;
+use Atef\LivewirePasswordMeter\Http\Livewire\PasswordField;
 
 class SkeletonServiceProvider extends PackageServiceProvider
 {
@@ -20,6 +22,9 @@ class SkeletonServiceProvider extends PackageServiceProvider
             ->name('skeleton')
             ->hasConfigFile()
             ->hasViews();
-          
+
+
+        Livewire::component('password-field', PasswordField::class);
+      
     }
 }

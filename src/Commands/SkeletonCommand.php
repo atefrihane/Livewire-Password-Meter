@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Atef\LivewirePasswordMeter\Commands;
 
 use Illuminate\Console\Command;
 

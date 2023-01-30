@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Http\Controllers;
+namespace Atef\LivewirePasswordMeter\Http\Controllers;
 
 class TestController
 

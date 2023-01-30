@@ -1,28 +1,33 @@
 <?php
-namespace VendorName\Skeleton\Http\Livewire;
+
+namespace Atef\LivewirePasswordMeter\Http\Livewire;
 
 
 use Livewire\Component;
-use VendorName\Skeleton\Traits\ValidatePassword;
+use Atef\LivewirePasswordMeter\Traits\ValidatePassword;
 
 class PasswordField extends Component
 {
-
-    public $password;
+    public $placeholder = "";
+    public $password = "";
     public $eyeIcon = false;
-    public $hide = true;
+    public $hide = false;
     public $class = "";
     public $styles = "";
+    public $progressCss = '';
     public $score = null;
+    protected $listeners = ['setBackground'];
 
     use ValidatePassword;
-
+  
     public function toggle()
     {
         $this->hide = !$this->hide;
     }
+
+
     public function render()
     {
-        return view('livewire.password-field');
+        return view('skeleton::livewire.password-field');
     }
 }

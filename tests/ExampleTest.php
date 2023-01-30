@@ -1,14 +1,14 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Atef\LivewirePasswordMeter\Tests;
 
-use VendorName\Skeleton\Tests\TestCase;
+use Atef\LivewirePasswordMeter\Tests\TestCase;
 
 
 class ExampleTest extends TestCase
 {
     public function test_true_is_true()
     {
-        return $this->assertTrue(true);
+        return $this->get('/z')->assertSee('OK');
     }
 }
