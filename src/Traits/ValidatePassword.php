@@ -9,11 +9,16 @@ trait ValidatePassword
 
     public function validateField(Zxcvbn $zxcvbn)
     {
-        $this->score =  $this->password ? $zxcvbn->passwordStrength($this->password)['score']  : null;
+        $this->score =  $this->value ? $zxcvbn->passwordStrength($this->value)['score']  : null;
         $this->emitSelf('setBackground');
+
         $this->emit(
             'passwordValueChanged',
-            $this->password
+            [
+                'key' => $this->wireKey,
+                'value' => $this->value
+            ]
+
         );
     }
 

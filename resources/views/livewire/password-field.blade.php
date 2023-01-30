@@ -1,8 +1,8 @@
-<div style="width:250px;margin : 0 auto;">
+<div style="width:250px;margin : 0 auto;" id="{{$wireKey}}-content">
 
     <div class="password-content" style="position: relative;">
         <input type="{{$hide ? 'password'  : 'text'}}" placeholder="{{$placeholder}}" class="{{$class}}"
-            style="{{$styles}}" wire:keyup="validateField" wire:change="validateField" wire:model="password">
+            style="{{$styles}}" wire:keyup="validateField" wire:change="validateField" wire:model="value">
         @if($eyeIcon)
         @if($hide)
         <button class="absolute top-0 right-1 p-2 text-gray-500" aria-label="Show password">
@@ -36,7 +36,9 @@
     <div style=" width: 100%;
     height: 3px;
     background: #e2e8f0;
-    position: relative;">
+    position: relative;
+    ">
         <div style="{{$progressCss}}"></div>
     </div>
-    <h1>{{$score}}</h1>
+ 
+</div>

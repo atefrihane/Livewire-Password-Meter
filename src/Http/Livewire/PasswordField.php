@@ -9,17 +9,18 @@ use Atef\LivewirePasswordMeter\Traits\ValidatePassword;
 class PasswordField extends Component
 {
     public $placeholder = "";
-    public $password = "";
+    public $value = "";
     public $eyeIcon = false;
     public $hide = false;
     public $class = "";
     public $styles = "";
     public $progressCss = '';
+    public $wireKey = "";
     public $score = null;
     protected $listeners = ['setBackground'];
 
     use ValidatePassword;
-  
+
     public function toggle()
     {
         $this->hide = !$this->hide;
