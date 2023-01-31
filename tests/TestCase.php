@@ -8,10 +8,8 @@ use Livewire\Livewire;
 use Illuminate\Support\Facades\View;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
-use Atef\LivewirePasswordMeter\RouteServiceProvider;
-use Atef\LivewirePasswordMeter\SkeletonServiceProvider;
 use Atef\LivewirePasswordMeter\Http\Livewire\PasswordField;
+use Atef\LivewirePasswordMeter\LivewirePasswordMeterServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -20,10 +18,10 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Atef\\LivewirePasswordMeter\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Atef\\LivewirePasswordMeter\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
         );
-      
-        View::addLocation(dirname(__DIR__).'/resources/views');
+
+        View::addLocation(dirname(__DIR__) . '/resources/views');
         $this->app['config']->set('app.key', 'AckfSECXIvnK5r28GVIWUAxmbBSjTsmF');
         $this->registerLivewireComponents();
     }
@@ -31,10 +29,10 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-           
-            SkeletonServiceProvider::class,
-       
-        
+
+            LivewirePasswordMeterServiceProvider::class,
+
+
 
         ];
     }

@@ -63,7 +63,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Atef\\LivewirePasswordMeter\\SkeletonServiceProvider"
+                "Atef\\LivewirePasswordMeter\\LivewirePasswordMeterServiceProvider"
             ],
             "aliases": {
                 "LivewirePasswordMeter": "Atef\\LivewirePasswordMeter\\Facades\\Skeleton"

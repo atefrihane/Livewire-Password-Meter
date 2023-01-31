@@ -9,7 +9,7 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Atef\LivewirePasswordMeter\Commands\SkeletonCommand;
 use Atef\LivewirePasswordMeter\Http\Livewire\PasswordField;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class LivewirePasswordMeterServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
