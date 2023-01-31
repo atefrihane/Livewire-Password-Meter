@@ -2,14 +2,16 @@
 
 namespace Atef\LivewirePasswordMeter\Tests;
 
-use Illuminate\Support\Facades\View;
+use Livewire\Livewire;
 
+
+use Illuminate\Support\Facades\View;
+use Orchestra\Testbench\TestCase as Orchestra;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 use Atef\LivewirePasswordMeter\RouteServiceProvider;
 use Atef\LivewirePasswordMeter\SkeletonServiceProvider;
-use Orchestra\Testbench\TestCase as Orchestra;
-
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Atef\LivewirePasswordMeter\Http\Livewire\PasswordField;
 
 class TestCase extends Orchestra
 {
@@ -23,6 +25,7 @@ class TestCase extends Orchestra
       
         View::addLocation(dirname(__DIR__).'/resources/views');
         $this->app['config']->set('app.key', 'AckfSECXIvnK5r28GVIWUAxmbBSjTsmF');
+        $this->registerLivewireComponents();
     }
 
     protected function getPackageProviders($app)
@@ -44,5 +47,10 @@ class TestCase extends Orchestra
         $migration = include __DIR__.'/../database/migrations/create_LivewirePasswordMeter_table.php.stub';
         $migration->up();
         */
+    }
+
+    protected function registerLivewireComponents()
+    {
+        Livewire::component('password-field', PasswordField::class);
     }
 }

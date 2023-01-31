@@ -22,9 +22,15 @@ class SkeletonServiceProvider extends PackageServiceProvider
             ->name('skeleton')
             ->hasConfigFile()
             ->hasViews();
+    }
 
+    public function bootingPackage()
+    {
+        $this->registerLivewireComponents();
+    }
 
+    public function registerLivewireComponents()
+    {
         Livewire::component('password-field', PasswordField::class);
-      
     }
 }
