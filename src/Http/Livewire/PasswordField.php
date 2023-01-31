@@ -11,7 +11,7 @@ class PasswordField extends Component
     public $placeholder = "";
     public $value = "";
     public $eyeIcon = false;
-    public $hide = false;
+    public $hide = true;
     public $class = "";
     public $styles = "";
     public $progressCss = '';

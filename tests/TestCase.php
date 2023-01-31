@@ -6,6 +6,7 @@ use Livewire\Livewire;
 
 
 use Illuminate\Support\Facades\View;
+use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Atef\LivewirePasswordMeter\Http\Livewire\PasswordField;
@@ -29,7 +30,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-
+            LivewireServiceProvider::class,
             LivewirePasswordMeterServiceProvider::class,
 
 
