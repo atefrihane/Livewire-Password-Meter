@@ -22,16 +22,7 @@ composer require atefrihane/livewire-password-meter
 
   ![Alt Image](https://github.com/atefrihane/Livewire-Password-Meter/blob/main/public/images/demo.png?raw=true)
 
-```html
 
-<livewire:password-field
-:class="'your-css-class'"
-:styles="'inline css styles'"
-:placeholder="'placeholder'"  
-:eyeIcon="true"  
-:wireKey="'password'" />
-
-```
 
 ## Usage
 
