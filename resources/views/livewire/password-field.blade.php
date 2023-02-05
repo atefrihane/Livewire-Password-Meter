@@ -1,11 +1,30 @@
 <div style="width:250px;margin : 0 auto;" id="{{$wireKey}}-content">
 
+    <head>
+        <style>
+            .eye-icon {
+                position: absolute;
+                top: 2px;
+                right: 1px;
+                padding: 2px;
+                color: #808080;
+            }
+
+            .progress-bar {
+                width: 100%;
+                height: 3px;
+                background: #e2e8f0;
+                position: relative;
+                top: .5rem;
+            }
+        </style>
+    </head>
     <div class="password-content" style="position: relative;">
         <input type="{{$hide ? 'password'  : 'text'}}" placeholder="{{$placeholder}}" class="{{$class}}"
             style="{{$styles}}" wire:keyup="validateField" wire:change="validateField" wire:model="value">
         @if($eyeIcon)
         @if($hide)
-        <button class="absolute top-0 right-1 p-2 text-gray-500" aria-label="Show password">
+        <button class="eye-icon" aria-label="Show password">
             <svg wire:click="toggle()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye-off"
                 width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -19,7 +38,7 @@
         </button>
         @else
 
-        <button class="absolute top-0 right-1 p-2 text-gray-500" aria-label="Show password">
+        <button class="eye-icon" aria-label="Show password">
             <svg wire:click="toggle()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye"
                 width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -33,12 +52,8 @@
         @endif
     </div>
 
-    <div style=" width: 100%;
-    height: 3px;
-    background: #e2e8f0;
-    position: relative;
-    ">
-        <div style="{{$progressCss}}"></div>
-    </div>
- 
+    <div class="progress-bar" ">
+        <div style=" {{$progressCss}}"></div>
+</div>
+
 </div>
