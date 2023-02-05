@@ -16,14 +16,22 @@ You can install the package via composer:
 composer require atefrihane/livewire-password-meter
 
 ```
-Optionally you can publish view files
-```bash
-
-php artisan vendor:publish --tag=":package_slug-views"
-
-```
 
   
+## Screenshot
+
+  ![Alt Image](https://github.com/atefrihane/Livewire-Password-Meter/tree/main/public/images/demo.png)
+
+```html
+
+<livewire:password-field
+:class="'your-css-class'"
+:styles="'inline css styles'"
+:placeholder="'placeholder'"  
+:eyeIcon="true"  
+:wireKey="'password'" />
+
+```
 
 ## Usage
 

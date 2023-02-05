@@ -1,4 +1,4 @@
-<div style="width:250px;margin : 0 auto;" id="{{$wireKey}}-content">
+<div id="{{$wireKey}}-content">
 
     <head>
         <style>
@@ -17,9 +17,14 @@
                 position: relative;
                 top: .5rem;
             }
+
+            .password-content {
+                position: relative;
+
+            }
         </style>
     </head>
-    <div class="password-content" style="position: relative;">
+    <div class="password-content">
         <input type="{{$hide ? 'password'  : 'text'}}" placeholder="{{$placeholder}}" class="{{$class}}"
             style="{{$styles}}" wire:keyup="validateField" wire:change="validateField" wire:model="value">
         @if($eyeIcon)
