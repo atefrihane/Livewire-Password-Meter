@@ -2,9 +2,10 @@
     "name": "atefrihane/livewire-password-meter",
     "description": "A package dedicated to check password strength",
     "keywords": [
-        ":vendor_name",
+        "atefrihane",
         "laravel",
-        ":package_slug"
+        "livewire"
+    
     ],
     "homepage": "https://github.com/:vendor_slug/:package_slug",
     "license": "MIT",
