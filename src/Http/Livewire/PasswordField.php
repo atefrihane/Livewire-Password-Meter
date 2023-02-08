@@ -18,7 +18,7 @@ class PasswordField extends Component
     public $progressCss = '';
     public $wireKey = "";
     public $score = null;
-    public $strength = "";
+
     protected $listeners = ['setBackground'];
 
     use ValidatePassword;

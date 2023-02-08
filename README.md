@@ -20,11 +20,13 @@ composer require  atefrihane/livewire-password-meter
 
 ```html
 <livewire:password-field
+    :wireKey="'password'"
     :class="'your-css-class'"
     :styles="'inline css styles'"
     :placeholder="'placeholder'"
     :eyeIcon="true"
-    :wireKey="'password'"
+    :showStrength="true"
+    
 />
 ```
 
@@ -37,7 +39,7 @@ composer require  atefrihane/livewire-password-meter
 | wireKey     | Key passed from the main livewire component (e.g., password)                                                            |
 | placeholder | Input's placeholder                                                                                                      |
 | eyeIcon     | Toggle the display of the password text between masked (hidden) and visible.                                             |
-| strength    | Provides feedback to the user on the strength or security of the password they have entered <br>(default = false)         |
+| showStrength    | Provides feedback to the user on the strength or security of the password they have entered <br>(default = false)         |
 | class       | Pass CSS classes to the component                                                                                        |
 | styles      | Pass inline CSS to the component                                                                                         |
 ```
