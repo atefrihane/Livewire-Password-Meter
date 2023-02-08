@@ -12,6 +12,15 @@ composer require  atefrihane/livewire-password-meter
 
 ```
 
+This package also depends on  **Alpine.js**
+
+Install it from [here](https://alpinejs.dev/).
+
+```bash
+
+<script src="//unpkg.com/alpinejs" defer></script>
+
+```
 ## Screenshot
 
 ![Alt Image](https://github.com/atefrihane/Livewire-Password-Meter/blob/main/public/images/image.png?raw=true)
@@ -32,8 +41,7 @@ composer require  atefrihane/livewire-password-meter
 
 ## Props
 
-```
-```
+
 | Prop        | Description                                                                                                             |
 | :---------- | :------------------------------------------------------------------------------------------------------------------------ |
 | wireKey     | Key passed from the main livewire component (e.g., password)                                                            |
@@ -42,8 +50,6 @@ composer require  atefrihane/livewire-password-meter
 | showStrength    | Provides feedback to the user on the strength or security of the password they have entered <br>(default = false)         |
 | class       | Pass CSS classes to the component                                                                                        |
 | styles      | Pass inline CSS to the component                                                                                         |
-```
-```
 
 ## Config
 
