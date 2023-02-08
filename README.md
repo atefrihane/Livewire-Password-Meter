@@ -14,7 +14,7 @@ composer require  atefrihane/livewire-password-meter
 
 ## Screenshot
 
-![Alt Image](https://github.com/atefrihane/Livewire-Password-Meter/blob/main/public/images/demo.png?raw=true)
+![Alt Image](https://github.com/atefrihane/Livewire-Password-Meter/blob/main/public/images/image.png?raw=true)
 
 ## Usage
 
