@@ -7,7 +7,7 @@
         "livewire"
     
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/atefrihane/Livewire-Password-Meter",
     "license": "MIT",
     "authors": [
         {

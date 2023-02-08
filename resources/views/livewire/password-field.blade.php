@@ -22,15 +22,46 @@
                 position: relative;
 
             }
+
+
+
+            .weak {
+
+                color: red;
+            }
+
+            .moderate {
+                color: orange;
+            }
+
+            .strong {
+                color: yellowgreen;
+            }
+
+            .very-strong {
+                color: green;
+            }
+
+            .display-score {
+                display: flex;
+                justify-content: flex-end;
+
+            }
+
+            .display-score>span {
+                margin-top: .5rem;
+            }
         </style>
+
+
     </head>
-    <div class="password-content">
-        <input type="{{$hide ? 'password'  : 'text'}}" placeholder="{{$placeholder}}" class="{{$class}}"
-            style="{{$styles}}" wire:keyup="validateField" wire:change="validateField" wire:model="value">
+    <div class="password-content" x-data="{ hide: {{$hide}} }">
+        <input :type="hide ? 'password'  : 'text'" placeholder="{{$placeholder}}" class="{{$class}}" style="{{$styles}}"
+            wire:keyup="validateField" wire:change="validateField" wire:model="value">
         @if($eyeIcon)
         @if($hide)
         <button class="eye-icon" aria-label="Show password">
-            <svg wire:click="toggle()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye-off"
+            <svg @click="hide = !hide" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye-off"
                 width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -44,7 +75,7 @@
         @else
 
         <button class="eye-icon" aria-label="Show password">
-            <svg wire:click="toggle()" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye"
+            <svg @click="hide = !hide" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye"
                 width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -54,11 +85,17 @@
             </svg>
         </button>
         @endif
+
+
         @endif
     </div>
 
     <div class="progress-bar" ">
         <div style=" {{$progressCss}}"></div>
-</div>
 
+    @if ($showStrength)
+    @include('livewire-password::component.showStrength', ['score' => $score])
+    @endif
+</div>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </div>

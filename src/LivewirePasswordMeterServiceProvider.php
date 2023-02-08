@@ -19,9 +19,10 @@ class LivewirePasswordMeterServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
-            ->hasConfigFile()
+            ->name('livewire-password')
+            ->hasConfigFile(['livewire-password-meter'])
             ->hasViews();
+        
     }
 
     public function bootingPackage()

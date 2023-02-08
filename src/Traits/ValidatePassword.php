@@ -24,11 +24,12 @@ trait ValidatePassword
 
     public function setBackground()
     {
+        if ($this->score === null) {
 
+            return  $this->progressCss = "position: absolute;top: 0;left: 0;height: 3px;background: #e2e8f0;width: 100%;";
+        }
         switch ($this->score) {
-            case NULL:
-                return  $this->progressCss = "position: absolute;top: 0;left: 0;height: 3px;background: #e2e8f0;width: 100%;";
-                break;
+
             case 0:
                 return $this->progressCss = "position: absolute;top: 0;left: 0;height: 3px;background: red;width: 100%;";
 

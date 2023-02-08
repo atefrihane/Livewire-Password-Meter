@@ -11,12 +11,14 @@ class PasswordField extends Component
     public $placeholder = "";
     public $value = "";
     public $eyeIcon = false;
+    public $showStrength = false;
     public $hide = true;
     public $class = "";
     public $styles = "";
     public $progressCss = '';
     public $wireKey = "";
     public $score = null;
+    public $strength = "";
     protected $listeners = ['setBackground'];
 
     use ValidatePassword;
@@ -29,6 +31,6 @@ class PasswordField extends Component
 
     public function render()
     {
-        return view('skeleton::livewire.password-field');
+        return view('livewire-password::livewire.password-field');
     }
 }
