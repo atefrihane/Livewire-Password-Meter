@@ -11,8 +11,10 @@ You can install the package via composer:
 composer require  atefrihane/livewire-password-meter
 
 ```
+
 ## Screenshot
-  ![Alt Image](https://github.com/atefrihane/Livewire-Password-Meter/blob/main/public/images/demo.png?raw=true)
+
+![Alt Image](https://github.com/atefrihane/Livewire-Password-Meter/blob/main/public/images/demo.png?raw=true)
 
 ## Usage
 
@@ -29,19 +31,18 @@ composer require  atefrihane/livewire-password-meter
 ## Props
 
 ```html
-
-| Prop        |                                                         Description                                                          |
-| :---------- | :--------------------------------------------------------------------------------------------------------------------------: |
-| wireKey     |                                 Key passed from the main livewire component ( eg: password)                                  |
-| placeholder |                                                     Input's placeholder                                                      |
-| eyeIcon     |                         Toggle the display of the password text between masked (hidden) and visible.                         |
-| strength    | Provides feedback to the user on the strength or security of the password they have entered <mark>( default = false) </mark> |
-| class       |                                              Pass css classes to the component                                               |
-| styles      |                                               Pass inline css to the component                                               |
-
+| Prop | Description | | :---------- |
+:--------------------------------------------------------------------------------------------------------------------------:
+| | wireKey | Key passed from the main livewire component ( eg: password) | |
+placeholder | Input's placeholder | | eyeIcon | Toggle the display of the
+password text between masked (hidden) and visible. | | strength | Provides
+feedback to the user on the strength or security of the password they have
+entered <mark>( default = false) </mark> | | class | Pass css classes to the
+component | | styles | Pass inline css to the component |
 ```
 
 ## Config
+
 Optionally you can publish config files which can be used to override feedback messages
 
 ```bash
@@ -55,11 +56,7 @@ php artisan vendor:publish  --provider="Atef\LivewirePasswordMeter\LivewirePassw
 
 ```bash
 
-
-
 composer test
-
-
 
 ```
 
