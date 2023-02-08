@@ -8,22 +8,13 @@ You can install the package via composer:
 
 ```bash
 
-
-
 composer require  atefrihane/livewire-password-meter
 
+## Screenshot
 
-
+  ![Alt Image](https://github.com/atefrihane/Livewire-Password-Meter/blob/main/public/images/demo.png?raw=true)
 ```
 
-Optionally you can publish config files which can be used to override feedback messages
-
-```bash
-
-php artisan vendor:publish  --provider="Atef\LivewirePasswordMeter\LivewirePasswordMeterServiceProvider" --tag="livewire-password-config"
-
-
-```
 
 ## Usage
 
@@ -37,9 +28,9 @@ php artisan vendor:publish  --provider="Atef\LivewirePasswordMeter\LivewirePassw
 />
 ```
 
-## ## Props
+## Props
 
-```html
+
 
 ```
 
@@ -54,17 +45,21 @@ php artisan vendor:publish  --provider="Atef\LivewirePasswordMeter\LivewirePassw
 
 ```
 
+
+Optionally you can publish config files which can be used to override feedback messages
+
+```bash
+
+php artisan vendor:publish  --provider="Atef\LivewirePasswordMeter\LivewirePasswordMeterServiceProvider" --tag="livewire-password-config"
+
+
 ```
 
 ## Testing
 
 ```bash
 
-
-
 composer test
-
-
 
 ```
 
